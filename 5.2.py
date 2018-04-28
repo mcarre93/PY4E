@@ -7,25 +7,21 @@
 largest = None
 smallest = None
 
-
 while True:
-    num = input("Enter a number: ")
-    if num == "done" : break
     try:
-        test = int(num)
-        if largest == None:
-            largest = num
-        if smallest == None:
-            smallest = num
-        elif num > largest:
-            largest = num
-        elif num < smallest:
-            smallest = num
-
+        num = input("Enter a number: ")
+        if num == "done":
+            break
+        if largest is None:
+            largest = int(num)
+        if int(num) > largest:
+            largest = int(num)
+        if smallest is None:
+            smallest = int(num)
+        if int(num) < smallest:
+            smallest = int(num)
     except:
-        print("Invalid input")
-        continue
+        print ("Invalid input")
 
-
-print("Maximum is", largest)
-print("Minimum is", smallest)
+print ("Maximum is", largest)
+print ("Minimum is", smallest)
